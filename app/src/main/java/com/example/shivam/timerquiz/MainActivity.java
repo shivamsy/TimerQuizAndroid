@@ -101,18 +101,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void enableButtons(GridLayout layout) {
-
-        // Get all touchable views
-        ArrayList<View> layoutButtons = layout.getTouchables();
-
-        // loop through them, if they are an instance of Button, enable it.
-        for(View v : layoutButtons){
-            if( v instanceof Button ) {
-                ((Button)v).setClickable(true);
-            }
-        }
-    }
 
     public void playAgain(View view) {
 
@@ -123,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
         msg.setVisibility(View.INVISIBLE);
         playAgain.setVisibility(View.INVISIBLE);
         gridLayout = findViewById(R.id.options);
-        enableButtons(gridLayout);
         isActive = true;
 
         newQuestion();
